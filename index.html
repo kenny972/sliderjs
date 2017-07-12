@@ -14,14 +14,36 @@
 		
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	
+
 	<body>
 	<header>
 		<h1>A slider with JS</h1>
 	</header>
 
-	<div id="carousel" class="carousel">
+	<!-- Star of slider -->
 
+<div id="carousel" class="carousel">
+  <div class="slides">
+    <div class="slide" data-state="active"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+
+
+  <div class="indicators">
+    <input class="indicator" name="indicator" data-slide="1" data-state="active" checked type="radio" />
+    <input class="indicator" name="indicator" data-slide="2" type="radio" />
+    <input class="indicator" name="indicator" data-slide="3" type="radio" />
+    <input class="indicator" name="indicator" data-slide="4" type="radio" />
+    <input class="indicator" name="indicator" data-slide="5" type="radio" />
+    <input class="indicator" name="indicator" data-slide="6" type="radio" />
+  </div>
+</div>
+
+	<!-- end of slider -->
 
 
 	<footer></footer>	
