@@ -17,22 +17,36 @@
 
 	<body>
 	<header>
-		<h1>A slider with JS</h1>
+		<h1 style="color: white;">A slider with JS</h1>
 	</header>
 
 	<!-- Star of slider -->
 
+
 <div id="carousel" class="carousel">
   <div class="slides">
-    <div class="slide" data-state="active"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
+    <div class="slide" data-state="active">
+    	<img style="height: 85%; width: 75%;" src="img/images.jpeg">
+    </div>
+    <div class="slide">
+    	<img style="height: 85%; width: 75%;" src="img/info.jpg">
+    </div>
+    <div class="slide">
+    	<img style="height: 85%; width: 75%;" src="img/info1.jpg">
+    </div>
+    <div class="slide">
+    	<img style="height: 85%; width: 75%;" src="img/info2.png">
+    </div>
+    <div class="slide">
+    	<img style="height: 85%; width: 75%;"  src="img/info3.jpg">
+    </div>
+    <div class="slide">
+    	<img style="height: 85%; width: 75%;" src="img/systeme2.jpg">
+    </div>
   </div>
 
 
+  		<!-- indicators with button -->
   <div class="indicators">
     <input class="indicator" name="indicator" data-slide="1" data-state="active" checked type="radio" />
     <input class="indicator" name="indicator" data-slide="2" type="radio" />
@@ -42,6 +56,8 @@
     <input class="indicator" name="indicator" data-slide="6" type="radio" />
   </div>
 </div>
+		<!-- end of indicators with button -->
+
 
 	<!-- end of slider -->
 
