@@ -1,18 +1,20 @@
+// My main variables: The carousel/slider number/slider speed
 var carousel = document.getElementById('carousel');
 var slides = 5;
-var speed = 4000; // 3 seconds
+var speed = 4000;
+
 
 function carouselHide(num) {
-    indicators[num].setAttribute('data-state', '');
-    slides[num].setAttribute('data-state', '');
+    indicators[num].setAttribute('advancement', '');
+    slides[num].setAttribute('advancement', '');
 
     slides[num].style.opacity=0;
 }
 
 function carouselShow(num) {
     indicators[num].checked = true;
-    indicators[num].setAttribute('data-state', 'active');
-    slides[num].setAttribute('data-state', 'active');
+    indicators[num].setAttribute('advancement', 'active');
+    slides[num].setAttribute('advancement', 'active');
 
     slides[num].style.opacity=1;
 }
@@ -21,19 +23,19 @@ function setSlide(slide) {
     return function() {
         // Reset all slides
         for (var i = 0; i < indicators.length; i++) {
-            indicators[i].setAttribute('data-state', '');
-            slides[i].setAttribute('data-state', '');
+            indicators[i].setAttribute('advancement', '');
+            slides[i].setAttribute('advancement', '');
             
             carouselHide(i);
         }
 
         // Set defined slide as active
-        indicators[slide].setAttribute('data-state', 'active');
-        slides[slide].setAttribute('data-state', 'active');
+        indicators[slide].setAttribute('advancement', 'active');
+        slides[slide].setAttribute('advancement', 'active');
         carouselShow(slide);
 
         // Stop the auto-switcher
-        clearInterval(switcher);
+        // clearInterval(switcher);
     };
 }
 
@@ -42,8 +44,8 @@ function switchSlide() {
 
     // Reset all slides
     for (var i = 0; i < indicators.length; i++) {
-        // If current slide is active & NOT equal to last slide then increment nextSlide
-        if ((indicators[i].getAttribute('data-state') == 'active') && (i !== (indicators.length-1))) {
+        
+        if ((indicators[i].getAttribute('advancement') == 'active') && (i !== (indicators.length-1))) {
             nextSlide = i + 1;
         }
 
